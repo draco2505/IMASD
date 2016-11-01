@@ -1039,7 +1039,7 @@ Partial Class RegistroProyectos2
         'e.InputParameters("CveRegion") = CveRegionBuscar
         'e.InputParameters("AnioConvocatoria") = AnioConvBuscar
         'e.InputParameters("CveInstitucion") = CveInstitucionBuscar
-        coEnableNavigation()
+        EnableNavigation()
     End Sub
 
 #End Region

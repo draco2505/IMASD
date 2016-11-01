@@ -608,7 +608,7 @@ Public Class clsAuthentication
         If strPassword = String.Empty Then
             Throw New ArgumentException("Contraseña del usuario no puede ser una cadena vacía")
         End If
-        If strPassword.Length > 20 Then
+        If strPassword.Length > 200 Then
             Throw New ArgumentException("Contraseña del usuario no puede exceder los veinte caracteres")
         End If
 
@@ -712,7 +712,7 @@ Public Class clsAuthentication
         End If
         If strPassword = String.Empty Then
             Throw New ArgumentException("Contraseña es obligatoria")
-        ElseIf strPassword.Length > 20 Then
+        ElseIf strPassword.Length > 1000 Then
             Throw New ArgumentException("Contrasena no puede ser una cadena de mas de veinte caracteres")
         End If
 

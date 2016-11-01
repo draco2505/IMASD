@@ -44,15 +44,15 @@
                 <HeaderStyle HorizontalAlign="Center" />
                 <ItemStyle HorizontalAlign="Center" Width="100px" />
             </asp:BoundField>
-            <asp:BoundField DataField="DescTipo" HeaderText="DescTipo" SortExpression="DescTipo" />
+            <asp:BoundField DataField="DescTipo"  HeaderText="DescTipo" SortExpression="DescTipo" />
             <asp:TemplateField>
                 <EditItemTemplate>
                     <asp:ImageButton ID="cmdCancelar" runat="server" CommandName="cancel" ImageUrl="~/images/aplicacion/btnCancelar.gif" CausesValidation="false" />
                     <asp:ImageButton ID="cmdGuardar" runat="server" CommandName="update" ImageUrl="~/images/aplicacion/btnGuardar.gif" CausesValidation="false" />
                 </EditItemTemplate>
                 <ItemTemplate>
-                    <asp:ImageButton ID="cmdEliminar" runat="server" CommandArgument='<%# Eval("CveEspecieTipo") %>' CausesValidation="false"
-                          CommandName="delete" ImageUrl="~/images/aplicacion/btnEliminar.gif" OnClientClick="<%# Eval(DescTipo&quot;, return confirm('Esta seguro de eliminar a {0}?')) %>" />
+                    <asp:ImageButton ID="cmdEliminar" runat="server" CommandArgument="<%# Eval("CveEspecieTipo") %>" CausesValidation="false"
+                          CommandName="delete" ImageUrl="~/images/aplicacion/btnEliminar.gif" OnClientClick="<%# Eval("DescTipo&quot;", "return confirm('Esta seguro de eliminar a {0}?')")%>" />
                        <%-- CommandName="delete" ImageUrl="~/images/aplicacion/btnEliminar.gif" OnClientClick="<%# Eval(&quit;DescTipo&quot;, &quot;return confirm('Esta seguro de eliminar a {0}?')&quot;) %>" />--%>
                 </ItemTemplate>
             </asp:TemplateField>

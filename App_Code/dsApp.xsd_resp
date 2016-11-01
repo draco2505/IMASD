@@ -3541,7 +3541,8 @@
               </DbSource>
             </Sources>
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="spRegionDDLTableAdapter" GeneratorDataComponentClassName="spRegionDDLTableAdapter" Name="spRegionDDL" UserDataComponentName="spRegionDDLTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="
+                        " GeneratorDataComponentClassName="spRegionDDLTableAdapter" Name="spRegionDDL" UserDataComponentName="spRegionDDLTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="sqlcnxProiectus (Web.config)" DbObjectName="IMASD.dbo.spRegionDDL" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>

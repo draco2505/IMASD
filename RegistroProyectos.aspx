@@ -15,27 +15,59 @@
                 <asp:Panel ID="pnlBusqueda" runat="server" Visible="True" Width="100%">
                     <table width="90%" align="center" class="tablaComun">
                             <tr>
-                                <td style="width: 30%"></td>
+                                <td > 
+                                    Tipo de proyecto
+                                </td>
+                                <td>
+                                     <asp:DropDownList ID="ddlTipoProyectoFill" runat="server" AutoPostBack="true" DataSourceID="odsTipoProyectoDDLFill"
+                                    DataTextField="DesTipoProy" DataValueField="CveTipoProy" Width="400px"></asp:DropDownList>
+                                     <asp:ObjectDataSource ID="odsTipoProyectoDDLFill" runat="server" OldValuesParameterFormatString="original_{0}"
+                                       SelectMethod="GetDataTipoProyectoBuscar" TypeName="dsAppTableAdapters.CatTipoProyectoTableAdapter">
+                                    </asp:ObjectDataSource>
+
+                                    <%-- <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="odsTipoApoyoBuscar" 
+                                     DataTextField="DesTipoApoyo" DataValueField="CveTipoApoyo" Width="300px"> </asp:DropDownList>
+                                     <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" OldValuesParameterFormatString="original_{0}"
+                                     SelectMethod="GetDataTipoApoyoBuscar" TypeName="dsAppTableAdapters.spTipoApoyoDDLTableAdapter">
+                                     </asp:ObjectDataSource>--%>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">
+
+                                </td>
                                 <td align="left" valign="middle" style="width: 54%">
-                                    <asp:TextBox ID="txtBusqueda" runat="server" Width="250px" MaxLength="100"></asp:TextBox><asp:RegularExpressionValidator
-                                        ID="revNombreProyectoEdt" runat="server" ControlToValidate="txtBusqueda" ErrorMessage="Texto a buscar tiene caracteres no permitidos"
-                                        ForeColor="" ToolTip="Texto a buscar tiene caracteres no permitidos" ValidationExpression="^[0-9a-zA-ZñÑÁáÉéÍíÓóÚúÜü/°\s!\x22\#\$%\x26'()*\+,\-.¿?¡:;_\\\d\n]{0,}$">x</asp:RegularExpressionValidator><asp:ImageButton
-                                        ID="ibtnBuscarProyectos" runat="server" ImageUrl="~/images/aplicacion/btnBuscar.gif" /></td>
+                                    <asp:TextBox ID="txtBusqueda" runat="server" Width="250px" MaxLength="100"></asp:TextBox>
+                                    <asp:RegularExpressionValidator ID="revNombreProyectoEdt" runat="server" ControlToValidate="txtBusqueda" ErrorMessage="Texto a buscar tiene caracteres no permitidos"
+                                    ForeColor="" ToolTip="Texto a buscar tiene caracteres no permitidos" ValidationExpression="^[0-9a-zA-ZñÑÁáÉéÍíÓóÚúÜü/°\s!\x22\#\$%\x26'()*\+,\-.¿?¡:;_\\\d\n]{0,}$">x</asp:RegularExpressionValidator>
+                                    <asp:ImageButton ID="ibtnBuscarProyectos" runat="server" ImageUrl="~/images/aplicacion/btnBuscar.gif" /></td>
                                     <td style="width: 16%"><asp:LinkButton ID="lnkbMasOpciones" runat="server" OnClick="lnkbMasOpciones_Click">+ más opciones ...</asp:LinkButton></td>
                             </tr>
                             <tr>
+                                
+                                                        
+
                                 <td align="left" colspan="3" valign="middle">
+
                                     <asp:Panel ID="pnlMasOpcionesBusqueda" runat="server" Visible="False" Width="100%">
+
                                         <table cellpadding="3" cellspacing="0" class="tablaComun" width="100%">
                                             <tr>
                                                 <td align="left" style="width: 30%">
-                                                    <%--Clave CONACYT--%></td>
+                                                    <%--Clave CONACYT--%>                                                
+                                                </td>
                                                 <td align="left" style="width: 70%">
+                                                   
                                                     <asp:TextBox ID="txtCveCONACYTBuscar" runat="server" MaxLength="20" Visible="False" Enabled="False"></asp:TextBox>
                                                     <asp:RegularExpressionValidator ID="revCveCONACYTBuscar" runat="server" ControlToValidate="txtCveCONACYTBuscar"
                                                         ErrorMessage="Clave CONACYT tiene caracteres no permitidos" ForeColor="" ToolTip="Clave CONACYT tiene caracteres no permitidos"
-                                                        ValidationExpression="^[0-9a-zA-ZñÑÁáÉéÍíÓóÚúÜü/°\s!\x22\#\$%\x26'()*\+,\-.¿?¡:;_\\\d\n]{0,}$">x</asp:RegularExpressionValidator></td>
+                                                        ValidationExpression="^[0-9a-zA-ZñÑÁáÉéÍíÓóÚúÜü/°\s!\x22\#\$%\x26'()*\+,\-.¿?¡:;_\\\d\n]{0,}$">x</asp:RegularExpressionValidator>
+
+                                                </td>
+                                              
+                                             
                                             </tr>
+                                            
                                             <tr>
                                                 <td align="left" colspan="2">
                                                     <asp:UpdatePanel ID="updpTipoApoyoEstatus" runat="server">
@@ -45,8 +77,9 @@
                                                                 <tr>
                                                                     <td style="width: 30%">Tipo de apoyo</td>
                                                                     <td style="width: 70%">
-                                                                        <asp:DropDownList ID="ddlTipoApoyoBuscar" runat="server" AutoPostBack="True" DataSourceID="odsTipoApoyoBuscar" DataTextField="DesTipoApoyo" DataValueField="CveTipoApoyo" Width="300px">
-                                                                        </asp:DropDownList><asp:ObjectDataSource ID="odsTipoApoyoBuscar" runat="server" OldValuesParameterFormatString="original_{0}"
+                                                                        <asp:DropDownList ID="ddlTipoApoyoBuscar" runat="server" AutoPostBack="True" DataSourceID="odsTipoApoyoBuscar" 
+                                                                            DataTextField="DesTipoApoyo" DataValueField="CveTipoApoyo" Width="300px"> </asp:DropDownList>
+                                                                        <asp:ObjectDataSource ID="odsTipoApoyoBuscar" runat="server" OldValuesParameterFormatString="original_{0}"
                                                                             SelectMethod="GetDataTipoApoyoBuscar" TypeName="dsAppTableAdapters.spTipoApoyoDDLTableAdapter">
                                                                         </asp:ObjectDataSource>
                                                                     </td>

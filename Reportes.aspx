@@ -3,13 +3,13 @@
 <%@ Register Assembly="EclipseWebSolutions.DatePicker" Namespace="EclipseWebSolutions.DatePicker"
     TagPrefix="cc1" %>
 
-<%@ Register Assembly="System.Web.Extensions, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692FBEA5521E1304"
-    Namespace="System.Web.UI" TagPrefix="asp" %>
-
-<%@ Register Assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692FBEA5521E1304"
-    Namespace="CrystalDecisions.Web" TagPrefix="CR" %>
-<%--<%@ Register assembly="CrystalDecisions.Web, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" namespace="CrystalDecisions.Web" tagprefix="CR" %>--%>
+<%--<%@ Register Assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692FBEA5521E1304"
+    Namespace="CrystalDecisions.Web" TagName="CR" TagPrefix="CR" %>--%>
+<%@ Register assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" 
+    namespace="CrystalDecisions.Web" TagPrefix="CR" %>
 <asp:Content ID="cntReportes" ContentPlaceHolderID="cphReportes" Runat="Server">
+
+     
     <asp:SiteMapPath ID="stmpReportes" runat="server">
         <PathSeparatorStyle ForeColor="DarkOliveGreen" />
         <RootNodeStyle ForeColor="DarkOliveGreen" />
@@ -21,7 +21,8 @@
             <table border="0" cellpadding="3" cellspacing="0" width="100%" style="background-image: url(images/default/fondocontenido.jpg)" class="tablaComun">
                 <tr>
                     <th colspan="2" class="thtablaComun">
-                        &nbsp;Parámetros del reporte de estatus de los proyectos</th>
+                        &nbsp;Parámetros del reporte de estatus de los proyectos
+                    </th>
                 </tr>
                 <tr>
                     <td colspan="2">
@@ -48,7 +49,8 @@
             Tipo de financiamiento</td>
         <td style="WIDTH: 70%">
             <asp:DropDownList id="ddlTipoApoyoRepEst" runat="server" DataTextField="DesTipoApoyo" DataSourceID="odsTipoApoyoRepEst" DataValueField="CveTipoApoyo" AutoPostBack="True">
-            </asp:DropDownList><asp:ObjectDataSource id="odsTipoApoyoRepEst" runat="server" TypeName="dsAppTableAdapters.spTipoApoyoDDLTableAdapter" SelectMethod="GetDataTipoApoyoBuscar" OldValuesParameterFormatString="original_{0}">
+            </asp:DropDownList><asp:ObjectDataSource id="odsTipoApoyoRepEst" runat="server" TypeName="dsAppTableAdapters.
+                " SelectMethod="GetDataTipoApoyoBuscar" OldValuesParameterFormatString="original_{0}">
             </asp:ObjectDataSource>
         </td>
     </tr>
@@ -449,9 +451,14 @@
                 </tr>
             </table>
         </asp:View>
-    </asp:MultiView><CR:CrystalReportViewer ID="crvwReportes" runat="server" AutoDataBind="true" />
+    </asp:MultiView>
+    
+    <CR:CrystalReportViewer ID="crvwReportes" runat="server" AutoDataBind="True"  />
+    <CR:CrystalReportSource ID="crsrReportes" runat="server"> </CR:CrystalReportSource>
+
+    <%--<CR:CrystalReportViewer ID="crvwReportes" runat="server" AutoDataBind="true" />
     <CR:CrystalReportSource ID="crsrReportes" runat="server">
-    </CR:CrystalReportSource>
+    </CR:CrystalReportSource>--%>
 
 </asp:Content>
 

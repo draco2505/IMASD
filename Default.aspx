@@ -97,7 +97,7 @@ div.botonIngresa > input.boton{ left:2px;}
         <asp:CustomValidator ID="cvUsuario" runat="server" ControlToValidate="txtUsuario"
                                 ErrorMessage="Usuario no válido" ToolTip="Usuario no válido">x</asp:CustomValidator>
 
-   <asp:TextBox ID="txtContrasenia" runat="server" MaxLength="20" TextMode="Password" TabIndex="2" CssClass="tbPass"></asp:TextBox>
+   <asp:TextBox ID="txtContrasenia" runat="server" MaxLength="200" TextMode="Password" TabIndex="2" CssClass="tbPass"></asp:TextBox>
             <asp:RequiredFieldValidator ID="rfvContrasenia" runat="server" ControlToValidate="txtContrasenia"
                 ErrorMessage="Contraseña es requerida" ToolTip="Contraseña es requerida" CssClass="pEquis">x</asp:RequiredFieldValidator>
             <asp:CustomValidator ID="cvContrasenia" runat="server" ControlToValidate="txtContrasenia"

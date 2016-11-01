@@ -300,7 +300,7 @@ Partial Class Reportes
         Dim intNumElementos As Integer = strElementos.Length
         Dim intIzqElemActual As Integer = 1000
         Dim Linea As CrystalDecisions.CrystalReports.Engine.LineObject
-        
+
 
         If AgrupamientoRepAcu = String.Empty Then
             repsReporte.ReportDefinition.ReportObjects.Item("txtAnio").Width = 13600

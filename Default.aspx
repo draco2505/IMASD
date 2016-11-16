@@ -79,11 +79,11 @@ div.botonIngresa > input.boton{ left:2px;}
     <h3>Entre sus alcances se encuentra:</h3>
 
     <ul>
-    <li>Inventario de proyectos</li>
-    <li>Seguimiento administrativo</li>
-    <li>Seguimiento técnico</li>
-    <li>Reportes y estadísticas</li>
-    <li>Productos</li>
+        <li>Inventario de proyectos</li>
+        <li>Seguimiento administrativo</li>
+        <li>Seguimiento técnico</li>
+        <li>Reportes y estadísticas</li>
+        <li>Productos</li>
     </ul>
 
 </div>

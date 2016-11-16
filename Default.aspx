@@ -12,7 +12,8 @@
     display:inline-block;
     position:relative;
 }
-    .tbUsuario 
+
+.tbUsuario 
 {
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
     border: none;

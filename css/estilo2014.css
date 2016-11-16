@@ -64,6 +64,8 @@ div.boton_container
     cursor:pointer;
     }
 
+
+
 div.boton_container > input.boton {
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
     border: medium none;
@@ -77,4 +79,7 @@ div.boton_container > input.boton {
     width: 121px;
     cursor:pointer;
     }
+
+
+
 

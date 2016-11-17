@@ -27,7 +27,8 @@
                         <asp:RequiredFieldValidator ID="rfvContraseniAnt" runat="server" ErrorMessage="La contraseña anterior es obligatoria"
                             ToolTip="La contraseña anterior es obligatoria" ControlToValidate="txtContraseniaAnt" ForeColor="">x</asp:RequiredFieldValidator>
                         <asp:CustomValidator ID="cusvContraseniaAntAU" runat="server" ErrorMessage="La contraseña anterior no es correcta"
-                            ToolTip="La contraseña anterior no es correcta" ControlToValidate="txtContraseniaAnt" ForeColor="">x</asp:CustomValidator></td>
+                            ToolTip="La contraseña anterior no es correcta" ControlToValidate="txtContraseniaAnt" ForeColor="">x</asp:CustomValidator>
+                    </td>
                 </tr>
                 <tr>
                     <td style="width: 30%">

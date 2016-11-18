@@ -3,10 +3,10 @@
 <%@ Register Assembly="EclipseWebSolutions.DatePicker" Namespace="EclipseWebSolutions.DatePicker"
     TagPrefix="cc1" %>
 
-<%--<%@ Register Assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692FBEA5521E1304"
-    Namespace="CrystalDecisions.Web" TagName="CR" TagPrefix="CR" %>--%>
-<%@ Register assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" 
-    namespace="CrystalDecisions.Web" TagPrefix="CR" %>
+<%@ Register Assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692FBEA5521E1304"
+    Namespace="CrystalDecisions.Web" TagPrefix="CR" %>
+<%--<%@ Register tagPrefix="CR" assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" 
+    namespace="CrystalDecisions.Web" %>--%>
 <asp:Content ID="cntReportes" ContentPlaceHolderID="cphReportes" Runat="Server">
 
      
@@ -49,8 +49,7 @@
             Tipo de financiamiento</td>
         <td style="WIDTH: 70%">
             <asp:DropDownList id="ddlTipoApoyoRepEst" runat="server" DataTextField="DesTipoApoyo" DataSourceID="odsTipoApoyoRepEst" DataValueField="CveTipoApoyo" AutoPostBack="True">
-            </asp:DropDownList><asp:ObjectDataSource id="odsTipoApoyoRepEst" runat="server" TypeName="dsAppTableAdapters.
-                " SelectMethod="GetDataTipoApoyoBuscar" OldValuesParameterFormatString="original_{0}">
+            </asp:DropDownList><asp:ObjectDataSource id="odsTipoApoyoRepEst" runat="server" TypeName="dsAppTableAdapters." SelectMethod="GetDataTipoApoyoBuscar" OldValuesParameterFormatString="original_{0}">
             </asp:ObjectDataSource>
         </td>
     </tr>
@@ -452,6 +451,7 @@
             </table>
         </asp:View>
     </asp:MultiView>
+    
     
     <CR:CrystalReportViewer ID="crvwReportes" runat="server" AutoDataBind="True"  />
     <CR:CrystalReportSource ID="crsrReportes" runat="server"> </CR:CrystalReportSource>

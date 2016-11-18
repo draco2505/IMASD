@@ -20,4 +20,11 @@ Public Class Conexion
         Return con
     End Function
 
+    Public Function GetConexion2() As String
+        Dim con As String
+        con = System.Configuration.ConfigurationManager.ConnectionStrings("ConnectionStringName").ConnectionString
+
+        Return con
+    End Function
+
 End Class

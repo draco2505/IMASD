@@ -173,7 +173,7 @@
                 <asp:ObjectDataSource ID="odsProyecto" runat="server" DeleteMethod="Delete" 
                     OldValuesParameterFormatString="original_{0}" 
                     SelectMethod="GetProyectoFiltrado" 
-                    TypeName="dsAppTableAdapters.ProyectoTableAdapter" UpdateMethod="Update">
+                    TypeName="dsAppTableAdapters.ProyectoTableAdapter" SortParameterName="AnioConvocatoria"  UpdateMethod="Update" >
                     <DeleteParameters>
                         <asp:Parameter Name="Original_CveProyecto" Type="String" />
                     </DeleteParameters>
@@ -236,7 +236,7 @@
                 <asp:GridView ID="grdvProyectos" runat="server" AllowPaging="True" Width="100%" 
                     DataKeyNames="CveProyecto" DataSourceID="odsProyecto" 
                     AutoGenerateColumns="False" PagerSettings-Mode="NumericFirstLast" 
-                    PagerSettings-Position="TopAndBottom" PagerStyle-BorderStyle="None" PagerSettings-FirstPageText="&lt;&lt; Primer Página" PagerSettings-LastPageText="Última Página &gt;&gt;" PagerSettings-PageButtonCount="20">
+                    PagerSettings-Position="TopAndBottom" PagerStyle-BorderStyle="None" PagerSettings-FirstPageText="&lt;&lt; Primer Página" PagerSettings-LastPageText="Última Página &gt;&gt;" PagerSettings-PageButtonCount="20" AllowSorting="True">
                     <PagerStyle CssClass="tablaAlternatigTemplate" HorizontalAlign="Center" />
                     <AlternatingRowStyle CssClass="tablaAlternatigTemplate" />
                     <PagerSettings Mode="NumericFirstLast" Position="TopAndBottom" />
